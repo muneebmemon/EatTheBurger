@@ -18,12 +18,12 @@ app.use(express.static(path.join(__dirname , 'public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// setting up handlebar as template engine
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 // Intializing router
 app.use(router);
-
-// setting up handlebar as template engine
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-app.set('view engine', 'handlebars');
 
 // listening to port
 app.listen(PORT, function() {

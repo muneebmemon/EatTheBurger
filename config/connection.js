@@ -1,5 +1,5 @@
 // Set up MySQL connection.
-var mysql = require("mysql");
+var mysql = require('mysql');
 
 var connection = mysql.createConnection({
   port: 3360,
@@ -15,7 +15,7 @@ connection.connect(function(err) {
     console.error("error connecting: " + err.stack);
     return;
   }
-  console.log("Connected as id... " + connection.threadId);
+  console.log("Connected to MySQL with id... " + connection.threadId);
 });
 
 module.exports = connection;

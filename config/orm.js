@@ -1,4 +1,4 @@
-var connection = require('./config/connection');
+var connection = require('../config/connection');
 
 // Helper function to convert object key/value pairs to SQL syntax
 function objToSql(ob) {
@@ -18,12 +18,14 @@ function objToSql(ob) {
       arr.push(key + "=" + value);
     }
   }
+  return arr.toString();
+}
 
 var orm = {
     
   // ORM for selecting
-  selectAll: function(tableName, cbf) {
-    var queryString = "SELECT * FROM " + tableName;
+  selectAll: function(tableName , cbf) {
+    var queryString = "SELECT * FROM " + tableName + ";";
 
     connection.query(queryString, function(err, result) {
       if (err) {
@@ -35,7 +37,7 @@ var orm = {
   },
 
   // ORM for insert 
-  insertOne: function(tablename, cols, vals, cbf) {
+  insertOne: function(tableName, cols, vals, cbf) {
     var queryString = "INSERT INTO " + tableName;
 
     queryString += " (";
@@ -63,7 +65,6 @@ var orm = {
     queryString += " WHERE ";
     queryString += condition;
 
-    console.log(queryString);
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;

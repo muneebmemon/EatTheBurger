@@ -1,0 +1,34 @@
+<h2> Eat da Burger!</h2>
+<img src='/assets/burger_img.jpg' height='150' width='300'>
+<br>
+<br>
+<div id="notDevoured">
+     <h5>Burgers ready to Devour!</h5>
+    {{#each burgers}}
+<!-- Section for burgers not Devoured yet -->
+        {{#unless devoured}}
+            <h4>{{id}} . {{burger_name}}</h4>
+            <button data-id='{{id}}' id='devourIt'>Devour It!</button>
+            <br>
+        {{/unless}}
+    {{/each}}
+</div>
+
+<div id="devoured">
+    <h5>Burgers already Devoured!</h5>
+    {{#each burgers}}
+    <!-- Section for burgers already Devoured -->
+        {{#if devoured}} 
+            <h4>{{id}} . {{burger_name}}</h4>
+            <br>
+        {{/if}}
+     {{/each}}
+</div>
+
+<!-- Enter New Burger -->
+<div id="submitNew">
+    <input type="text" name="burger_name" id="burgerName" placeholder="Enter Burger Name">
+    <input type="submit" name="submit" value="Submit" id="submitNewBurger">
+    <br><br>
+    <h6>Enter a burger you want to eat and then hit Submit!!!!</h6>
+</div>

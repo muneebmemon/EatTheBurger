@@ -1,0 +1,45 @@
+body {
+    background-color: orange;
+    text-align: center;
+    width: 100%;
+}
+
+h2 {
+    color: black;
+}
+
+h4 {
+    display: inline-block;
+}
+
+#devoured {
+    float: right;
+    max-width: 50%;
+    margin: 0px 150px 0px 0px;
+    text-align: left;
+    background-color: olive;
+    padding: 5px;
+    border: 2px solid #000;
+}
+
+#devoured h5 {
+    text-decoration: underline;
+}
+
+#notDevoured {
+    float: left;
+    max-width: 50%;
+    text-align: left;
+    margin: 0px 100px;
+    background-color: darkgoldenrod;
+    padding: 5px;
+    border: 2px solid #000;
+}
+
+#notDevoured h5 {
+    text-decoration: underline;
+}
+
+#submitNew {
+    clear: both;
+}
