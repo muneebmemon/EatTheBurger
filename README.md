@@ -15,3 +15,14 @@
 * When you want to devour a burger hit (Devour It) button and the burger gets added to list of burgers already devoured.
 
 ![Alt text](/public/assets/etbp4.png?raw=true)
+
+## Technologies used
+
+- Node.js
+- Express.js
+- MySQL
+- ORM
+- Javascript
+- JQuery
+- HTML
+- CSS
